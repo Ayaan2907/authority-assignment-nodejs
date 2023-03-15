@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 8000;
 
 
 const defaultConfig = {
-  baseUrl: "https://rest.gohighlevel.com/v1",
+    baseUrl: "https://rest.gohighlevel.com/v1",
   headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${API_KEY}`,
@@ -23,6 +23,7 @@ axios.defaults.headers = defaultConfig.headers;
 
 
 app.post("/run", async (req, res) => {
+  console.log("running")
   let resp = {};
   const contactId = req.query.contactId;
   const customFieldId = req.query.customeFieldId;
