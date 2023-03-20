@@ -27,7 +27,8 @@ app.post("/run", async (req, res) => {
     const customFieldId = req.query.customeFieldId;
     const value = req.query.value;
     const email = req.query.email;
-
+    3t7JDcpa8qQa4HnOAfT3 field
+    yhner4FX2jKzrPuQTHvf contact
     const data = {
         email: email,
         customFields: [
@@ -43,7 +44,12 @@ app.post("/run", async (req, res) => {
         const response2 = await axios.get(`custom-fields/${customFieldId}`);
         resp.customField = response2.data;
 
-        const response3 = await axios.put(`contacts/${contactId}`, data);
+        const response3 = await axios.put(`contacts/${contactId}`, {
+            email: email,
+            customFields: {
+                customFieldId: value,
+            },
+        });
         resp.updatedContact = response3.data?.contact;
     } catch (error) {
         console.log(error);
