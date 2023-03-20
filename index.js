@@ -32,8 +32,7 @@ app.post("/run", async (req, res) => {
         email: email,
         customFields: [
             {
-                id: customFieldId,
-                value: value,
+                customFieldId: value,
             },
         ],
     };
