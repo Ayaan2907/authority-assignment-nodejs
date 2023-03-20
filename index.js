@@ -27,8 +27,8 @@ app.post("/run", async (req, res) => {
     const customFieldId = req.query.customeFieldId;
     const value = req.query.value;
     const email = req.query.email;
-    3t7JDcpa8qQa4HnOAfT3 field
-    yhner4FX2jKzrPuQTHvf contact
+    // 3t7JDcpa8qQa4HnOAfT3 field
+    // yhner4FX2jKzrPuQTHvf contact
     const data = {
         email: email,
         customFields: [
